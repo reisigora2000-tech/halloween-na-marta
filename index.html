@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Festa de Halloween · 07.11</title>
+<meta name="description" content="Festa de Halloween + Aniversário do Igor. Sábado, 07.11, 19h na Casa da Marta. Confirme sua presença e diga o que vai levar.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Festa de Halloween + Aniversário do Igor · 07.11">
+<meta property="og:description" content="Venha fantasiado!!!!! Confirme presença e diga o que vai levar.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mq mq-top" aria-hidden="true"><div class="mq-track">
+  <span>Festa de Halloween <i>✶</i> 07.11 <i>✶</i> Venha fantasiado <i>✶</i>&nbsp;</span><span>Festa de Halloween <i>✶</i> 07.11 <i>✶</i> Venha fantasiado <i>✶</i>&nbsp;</span>
+</div></div>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="dots" aria-hidden="true"></div>
+    <img class="skull" src="assets/caveira.webp" alt="" width="672" height="900">
+    <img class="hands" src="assets/maos.webp" alt="" width="339" height="633">
+    <svg class="seal" viewBox="0 0 300 300" aria-hidden="true">
+      <defs><path id="ring" d="M150,150 m-116,0 a116,116 0 1,1 232,0 a116,116 0 1,1 -232,0"/></defs>
+      <circle cx="150" cy="150" r="148" fill="#EDE6DA"/>
+      <circle cx="150" cy="150" r="90" fill="#D62118"/>
+      <text font-family="Archivo" font-weight="800" font-size="27" letter-spacing="2" style="font-stretch:125%" textLength="728" lengthAdjust="spacing">
+        <textPath href="#ring">VENHA FANTASIADO ✶ VENHA FANTASIADO ✶</textPath>
+      </text>
+      <text x="150" y="180" text-anchor="middle" font-family="Anton" font-size="84" fill="#000">!!!!!</text>
+    </svg>
+    <h1 class="title">Halloween</h1>
+    <p class="tag">+ Aniversário do <b>Igor</b></p>
+  </header>
+
+  <section class="ticket" aria-label="Informações da festa">
+    <div class="stub">
+      <span class="k">Sábado</span>
+      <span class="day">07.11</span>
+      <span class="time">19h00 às 23h30</span>
+      <span class="bd"><small>Parabéns às</small><b>23H00</b></span>
+    </div>
+    <div class="info">
+      <div><h3>Onde</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Rua+Julio+Ribeiro+650" target="_blank" rel="noopener">Casa da Marta ↗<br>Rua Julio Ribeiro, 650</a></p></div>
+      <div><h3>Dress code</h3><p>Venha fantasiado!!!!!</p></div>
+      <div><h3>Comes e bebes</h3><p>Cada um traz um prato e a sua bebida</p></div>
+    </div>
+  </section>
+
+  <section class="card" id="rsvp">
+    <img class="fangs" src="assets/boca.webp" alt="" width="372" height="476">
+    <h2 class="h2">Confirma aí</h2>
+    <p class="lede">Diz se vem e o que vai trazer. Assim a gente vê o que está faltando.</p>
+
+    <form id="form" novalidate>
+      <label class="field">
+        <span class="lbl">Seu nome</span>
+        <input name="nome" autocomplete="name" placeholder="Como te chamam" required maxlength="60">
+      </label>
+
+      <fieldset class="field">
+        <legend class="lbl">Você vem?</legend>
+        <div class="chips">
+          <label><input type="radio" name="presenca" value="sim" required><span>Tô dentro</span></label>
+          <label><input type="radio" name="presenca" value="talvez"><span>Talvez</span></label>
+          <label><input type="radio" name="presenca" value="nao"><span>Não vou conseguir</span></label>
+        </div>
+      </fieldset>
+
+      <div class="coming" id="coming">
+        <div class="field">
+          <span class="lbl">Quantas pessoas, contando você?</span>
+          <div class="stepper">
+            <button type="button" data-step="-1" aria-label="Menos uma pessoa">−</button>
+            <output id="pessoasOut">1</output>
+            <button type="button" data-step="1" aria-label="Mais uma pessoa">+</button>
+            <input type="hidden" name="pessoas" value="1">
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend class="lbl">Vai levar</legend>
+          <div class="chips">
+            <label><input type="radio" name="comida" value="salgado"><span>Salgado</span></label>
+            <label><input type="radio" name="comida" value="doce"><span>Doce</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend class="lbl">Seu prato é</legend>
+          <div class="chips">
+            <label><input type="radio" name="dieta" value="carnista"><span>Carnista</span></label>
+            <label><input type="radio" name="dieta" value="vegetariano"><span>Vegetariano</span></label>
+            <label><input type="radio" name="dieta" value="vegano"><span>Vegano</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span class="lbl">O que vai ser? <em>opcional</em></span>
+          <input name="prato" placeholder="Ex.: coxinha, brownie, salada…" maxlength="80">
+        </label>
+
+        <fieldset class="field">
+          <legend class="lbl">Bebida que pretende levar <em>pode marcar mais de uma</em></legend>
+          <div class="chips">
+            <label><input type="checkbox" name="bebidas" value="Cerveja"><span>Cerveja</span></label>
+            <label><input type="checkbox" name="bebidas" value="Vinho"><span>Vinho</span></label>
+            <label><input type="checkbox" name="bebidas" value="Destilado"><span>Destilado</span></label>
+            <label><input type="checkbox" name="bebidas" value="Drink pronto"><span>Drink pronto</span></label>
+            <label><input type="checkbox" name="bebidas" value="Refri / suco"><span>Refri / suco</span></label>
+            <label><input type="checkbox" name="bebidas" value="Água / gelo"><span>Água / gelo</span></label>
+            <label><input type="checkbox" name="bebidas" value="Outro"><span>Outro</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span class="lbl">Detalhe da bebida <em>opcional</em></span>
+          <input name="bebidaQual" placeholder="Ex.: 6 long necks, 1 vinho tinto" maxlength="80">
+        </label>
+
+        <label class="field">
+          <span class="lbl">Vai de quê? <em>opcional, pode ser segredo</em></span>
+          <input name="fantasia" placeholder="Sua fantasia" maxlength="60">
+        </label>
+      </div>
+
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" type="submit" id="submit">Confirmar</button>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <p class="k" id="doneKicker">Presença confirmada</p>
+      <h2 class="h2" id="doneTitle">Tá confirmado!</h2>
+      <p class="lede" id="doneText"></p>
+      <div class="actions">
+        <a class="btn" id="cal" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Festa+de+Halloween+%2B+Anivers%C3%A1rio+do+Igor&dates=20261107T190000/20261107T233000&ctz=America/Sao_Paulo&location=Casa+da+Marta,+Rua+Julio+Ribeiro+650&details=Venha+fantasiado!!!!!+Parab%C3%A9ns+%C3%A0s+23h.+P%C3%B3s-festa:+todos+no+pub.">Salvar na agenda</a>
+        <button class="btn ghost" type="button" id="edit">Editar resposta</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="board" id="board" aria-live="polite">
+    <h2 class="h2 sm">O que já vai ter</h2>
+    <p class="count"><b id="nPessoas">–</b> pessoas confirmadas <span id="nTalvez"></span></p>
+    <div class="grid" id="foodGrid"></div>
+    <div class="bev" id="bevList"></div>
+    <p class="missing" id="missing"></p>
+  </section>
+
+  <footer class="foot">Halloween + Aniversário do Igor · 07.11 · Casa da Marta</footer>
+</main>
+
+<div class="mq mq-bot" aria-hidden="true"><div class="mq-track rev">
+  <span>Pós-festa: todos no pub <i>✶</i>&nbsp;</span><span>Pós-festa: todos no pub <i>✶</i>&nbsp;</span><span>Pós-festa: todos no pub <i>✶</i>&nbsp;</span><span>Pós-festa: todos no pub <i>✶</i>&nbsp;</span>
+</div></div>
+
+<div class="paper-m" aria-hidden="true"></div><div class="paper-s" aria-hidden="true"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
