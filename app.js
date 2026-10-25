@@ -70,7 +70,7 @@ function validate(d) {
   if (!d.nome) return "Faltou seu nome.";
   if (!d.presenca) return "Diz se você vem.";
   if (d.presenca === "nao") return "";
-  if (!d.comida) return "Marca se vai levar salgado ou doce.";
+  if (!d.comida) return "Marca se vai levar salgado, doce ou meio a meio.";
   if (!d.dieta) return "Marca se o prato é carnista, vegetariano ou vegano.";
   if (!d.bebidas.length) return "Marca pelo menos um tipo de bebida.";
   return "";
@@ -126,7 +126,8 @@ function showDone(d) {
   } else {
     kicker.textContent = d.presenca === "talvez" ? "Anotado como talvez" : "Presença confirmada";
     title.textContent = d.presenca === "talvez" ? `Tomara que dê, ${first}!` : `Tá confirmado, ${first}!`;
-    const prato = `${d.comida} ${d.dieta}${d.prato ? ` (${d.prato})` : ""}`;
+    const leva = d.comida === "ambos" ? "salgado e doce" : d.comida;
+    const prato = `${leva} ${d.dieta}${d.prato ? ` (${d.prato})` : ""}`;
     const beb = d.bebidas.join(", ").toLowerCase() + (d.bebidaQual ? ` (${d.bebidaQual})` : "");
     const gente = d.pessoas > 1 ? `Vocês são ${d.pessoas}. ` : "";
     text.textContent = `${gente}Você leva ${prato} e ${beb}. Sábado, 07.11, a partir das 19h. Venha fantasiado!`;
@@ -158,7 +159,7 @@ function demoSummary() {
   if (d && d.presenca === "talvez") s.talvez += d.pessoas;
   if (d && d.presenca === "sim") {
     s.pessoas += d.pessoas;
-    if (d.comida && d.dieta) s.comida[d.comida][d.dieta]++;
+    if (d.comida && d.dieta) (d.comida === "ambos" ? ["salgado", "doce"] : [d.comida]).forEach((c) => s.comida[c][d.dieta]++);
     d.bebidas.forEach((b) => (s.bebidas[b] = (s.bebidas[b] || 0) + 1));
   }
   return s;
